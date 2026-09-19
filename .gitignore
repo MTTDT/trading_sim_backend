@@ -1,0 +1,13 @@
+/target/
+**/*.rs.bk
+.env
+.env.local
+.env.*.local
+.idea/
+.vscode/
+*.iml
+.DS_Store
+*.log
+.sqlx/
+dist/
+*.tmp
