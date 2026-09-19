@@ -20,6 +20,8 @@ async fn main() {
 
     let router = build_router(state);
 
+    
+
     let port: u16 = std::env::var("PORT")
         .unwrap_or_else(|_| "3000".to_string())
         .parse()
