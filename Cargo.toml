@@ -6,7 +6,24 @@ edition = "2024"
 [dependencies]
 axum = "0.8.9"
 dotenvy = "0.15.7"
+serde = "1.0.229"
 serde_json = "1.0.151"
-sqlx = { version = "0.9.0",  features = ["runtime-tokio", "postgres", "chrono", "macros", "migrate"] }
+sqlx = { version = "0.9.0",  features = ["runtime-tokio", "postgres", "chrono", "macros", "migrate", "uuid"] }
+time = "0.3.55"
 tokio =  {version = "1.53.1", features = ["full"] }
 tracing = "0.1.44"
+uuid = { version = "1.26.1", features = ["v4", "serde"] }
+yahoo_finance_api = "5.0.0"
+utoipa = { version = "6.0.0", features = ["axum_extras", "uuid", "chrono"] }
+utoipa-scalar = { version = "0.4.0", features = ["axum"] }
+
+tower-sessions = "0.14"
+async-trait = "0.1"
+tower-sessions-sqlx-store = { version = "0.15", features = ["postgres"] }
+argon2 = "0.5"
+oauth2 = "5"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }   
+jsonwebtoken = { version = "11", features = ["rust_crypto"] }
+chrono = "0.4.45"
+axum-extra = { version = "0.12.6", features = ["cookie"] }
